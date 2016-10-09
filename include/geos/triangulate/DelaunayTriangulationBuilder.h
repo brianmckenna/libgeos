@@ -136,9 +136,10 @@ public:
 	 * of {@link Polygon}.
 	 * 
 	 * @param geomFact the geometry factory to use to create the output
+	 * @param includeFrame true if the frame triangles should be included
 	 * @return the faces of the triangulation. The caller takes ownership of the returned object.
 	 */
-	std::auto_ptr<geom::GeometryCollection> getTriangles(const geom::GeometryFactory& geomFact);
+	std::auto_ptr<geom::GeometryCollection> getTriangles(const geom::GeometryFactory& geomFact, bool includeFrame);
 
 	/** 
 	 * Computes the {@link Envelope} of a collection of {@link Coordinate}s.

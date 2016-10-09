@@ -75,7 +75,7 @@ namespace tut
 		ensure(!sub.isVertexOfEdge(e, Vertex(10, 10)));
 
 		GeometryFactory::unique_ptr geomFact(GeometryFactory::create());
-		std::auto_ptr<GeometryCollection> tris = sub.getTriangles(*geomFact);
+		std::auto_ptr<GeometryCollection> tris = sub.getTriangles(*geomFact, false);
 		tris.reset();
 		//WKTWriter wkt;
 		//printf("%s\n", wkt.writeFormatted(tris).c_str());

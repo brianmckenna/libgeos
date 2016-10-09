@@ -128,10 +128,10 @@ DelaunayTriangulationBuilder::getEdges(
 
 std::auto_ptr<geom::GeometryCollection>
 DelaunayTriangulationBuilder::getTriangles(
-		const geom::GeometryFactory& geomFact)
+		const geom::GeometryFactory& geomFact, bool includeFrame)
 {
 	create();
-	return subdiv->getTriangles(geomFact);
+	return subdiv->getTriangles(geomFact, includeFrame);
 }
 
 geom::Envelope

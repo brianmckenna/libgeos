@@ -473,10 +473,10 @@ QuadEdgeSubdivision::getEdges(const geom::GeometryFactory& geomFact)
 }
 
 std::auto_ptr<GeometryCollection>
-QuadEdgeSubdivision::getTriangles( const GeometryFactory &geomFact)
+QuadEdgeSubdivision::getTriangles( const GeometryFactory &geomFact, bool includeFrame)
 {
     TriList triPtsList;
-    getTriangleCoordinates(&triPtsList, false);
+    getTriangleCoordinates(&triPtsList, includeFrame);
     std::vector<Geometry*> tris;
 
     for(TriList::const_iterator it = triPtsList.begin();

@@ -393,9 +393,10 @@ public:
 	 * of triangular {@link Polygon}s.
 	 * 
 	 * @param geomFact the GeometryFactory to use
+	 * @param includeFrame true if the frame triangles should be included
 	 * @return a GeometryCollection of triangular Polygons. The caller takes ownership of the returned object.
 	 */
-	std::auto_ptr<geom::GeometryCollection> getTriangles(const geom::GeometryFactory &geomFact);
+	std::auto_ptr<geom::GeometryCollection> getTriangles(const geom::GeometryFactory &geomFact, bool includeFrame);
 
 	/**  
 	 * Gets the cells in the Voronoi diagram for this triangulation.

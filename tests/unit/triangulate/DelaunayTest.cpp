@@ -53,7 +53,7 @@ namespace tut
 
 		builder.setSites(*sites);
 		if(computeTriangles)
-			results=builder.getTriangles(geomFact);
+			results=builder.getTriangles(geomFact, false);
 		else
 			results=builder.getEdges(geomFact);
 
@@ -85,7 +85,7 @@ namespace tut
 
 		//extract the triangles from the subdivision
     const GeometryFactory& geomFact(*GeometryFactory::getDefaultInstance());
-		std::auto_ptr<GeometryCollection> tris = sub.getTriangles(geomFact);
+		std::auto_ptr<GeometryCollection> tris = sub.getTriangles(geomFact, false);
 	}
 
 	// 2 - Test Triangle

@@ -6752,7 +6752,7 @@ GEOSDelaunayTriangulation_r(GEOSContextHandle_t extHandle, const Geometry *g1, d
       builder.setSites(*g1);
 
       if ( onlyEdges ) return builder.getEdges( *g1->getFactory() ).release();
-      else return builder.getTriangles( *g1->getFactory() ).release();
+      else return builder.getTriangles( *g1->getFactory(), false ).release();
 
     }
     catch (const std::exception &e)
